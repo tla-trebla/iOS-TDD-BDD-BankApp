@@ -12,6 +12,12 @@ import XCTest
 class BankAppTests: XCTestCase {
     
     private var account: Account!
+    
+    override func setUp() {
+        super.setUp()
+        
+        account = Account()
+    }
 
     func test_InitialBalanceZero() {
         
