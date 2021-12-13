@@ -19,7 +19,12 @@ struct Account {
         self.balance += amount
     }
     
-    mutating func withdraw(_ amount: Double) {
-        self.balance -= amount
+    mutating func withdraw(_ amount: Double) throws {
+        let netBalance = self.balance - amount
+        if netBalance < 0 {
+            throw AccountError.insufficientBalance
+        } else {
+            self.balance -= amount
+        }
     }
 }
