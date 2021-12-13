@@ -28,5 +28,12 @@ class BankAppTests: XCTestCase {
         self.account.deposit(100)
         XCTAssertEqual(100, self.account.balance)
     }
+    
+    func test_WithdrawsCertainAmount() {
+        
+        self.account.deposit(200)
+        self.account.withdraw(100)
+        XCTAssertEqual(100, self.account.balance)
+    }
 
 }
