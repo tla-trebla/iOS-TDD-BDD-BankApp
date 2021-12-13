@@ -19,7 +19,7 @@ class BankAppTests: XCTestCase {
     
     func test_DepositsCertainAmount() {
         
-        let account = Account()
+        var account = Account()
         account.deposit(100)
         
         XCTAssertEqual(100, account.balance)
