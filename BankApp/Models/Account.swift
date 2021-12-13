@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum AccountError: Error {
+    case insufficientBalance
+}
+
 struct Account {
     var balance: Double = 0.0
     
