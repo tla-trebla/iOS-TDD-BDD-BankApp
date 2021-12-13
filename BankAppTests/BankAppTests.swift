@@ -16,17 +16,17 @@ class BankAppTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        account = Account()
+        self.account = Account()
     }
 
     func test_InitialBalanceZero() {
-        XCTAssertTrue(account.balance == 0, "Balance is not zero!")
+        XCTAssertTrue(self.account.balance == 0, "Balance is not zero!")
     }
     
     func test_DepositsCertainAmount() {
         
-        account.deposit(100)
-        XCTAssertEqual(100, account.balance)
+        self.account.deposit(100)
+        XCTAssertEqual(100, self.account.balance)
     }
 
 }
