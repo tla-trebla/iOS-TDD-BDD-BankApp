@@ -10,6 +10,8 @@ import XCTest
 @testable import BankApp
 
 class BankAppTests: XCTestCase {
+    
+    private var account: Account!
 
     func test_InitialBalanceZero() {
         
