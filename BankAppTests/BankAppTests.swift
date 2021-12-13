@@ -16,5 +16,13 @@ class BankAppTests: XCTestCase {
         let account = Account()
         XCTAssertTrue(account.balance == 0, "Balance is not zero!")
     }
+    
+    func test_DepositsCertainAmount() {
+        
+        let account = Account()
+        account.deposit(100)
+        
+        XCTAssertEqual(100, account.balance)
+    }
 
 }
