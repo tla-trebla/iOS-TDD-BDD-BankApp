@@ -15,7 +15,7 @@ struct Account {
         self.balance += amount
     }
     
-    mutating func withdraw(amount: Double) {
+    mutating func withdraw(_ amount: Double) {
         self.balance -= amount
     }
 }
